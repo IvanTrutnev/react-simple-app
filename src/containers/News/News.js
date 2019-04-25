@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import NewsTable from '../../components/Table/Table';
 import Input from '../../components/Input/Input';
 
