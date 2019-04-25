@@ -1,0 +1,15 @@
+
+.footer__nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer__nav  > li {
+    list-style-type: none;
+    margin-left: 10px;
+}
+
+.footer__nav a {
+    text-decoration: none;
+}
+
