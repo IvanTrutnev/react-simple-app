@@ -1,18 +1,35 @@
 .header {
+    min-height: 50px;
     border: 1px solid #000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
 }
 
 .header__nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: flex-end;
+    align-items: stretch;
+    height: 100%;
 }
 
 .header__nav > li {
-    list-style-type: none;
-    margin-left: 10px;
-
+    display: flex;
+    align-items: center;
 }
 
 .header__nav a {
+    display: flex;
     text-decoration: none;
+    align-items: center;
+    height: 100%;
+    padding: 0 10px;
+}
+
+.header__nav a:hover,
+.header__nav a.active {
+    background-color: rgba(0,0,0,.2);
 }
