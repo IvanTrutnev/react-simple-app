@@ -12,21 +12,28 @@ import Contacts from './components/Contacts/Contacts';
 import Posts from './containers/Posts/Posts';
 import Post from './containers/Post/Post';
 import News from './containers/News/News';
-import Error from './components/Error/Error'
+import Todo from './containers/Todo/Todo';
+import Error from './components/Error/Error';
+
+import { Provider } from 'react-redux';
+import store from './store'
 
 ReactDOM.render(
-  <BrowserRouter>
-    <App>
-      <Switch>
-        <Route exact path="/" component={Home}></Route>
-        <Route path="/contacts" component={Contacts}></Route>
-        <Route path="/news" component={News}></Route>
-        <Route exact path="/posts" component={Posts}></Route>
-        <Route path="/posts/:id" component={Post}></Route>
-        <Route path="*" component={Error}></Route>
-      </Switch>
-    </App>
-  </BrowserRouter>
+  <Provider store={store}>
+    <BrowserRouter>
+        <App>
+          <Switch>
+            <Route exact path="/" component={Home}></Route>
+            <Route path="/contacts" component={Contacts}></Route>
+            <Route path="/news" component={News}></Route>
+            <Route exact path="/posts" component={Posts}></Route>
+            <Route path="/to-do" component={Todo}></Route>
+            <Route path="/posts/:id" component={Post}></Route>
+            <Route path="*" component={Error}></Route>
+          </Switch>
+        </App>
+      </BrowserRouter>
+  </Provider>
   , document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
